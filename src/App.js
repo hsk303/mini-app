@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import form from './form';
-import display from './display';
+import Form from './Form';
+import Display from './Display';
 function App() {
 
     let [name, setName] = useState("");
@@ -9,9 +9,9 @@ function App() {
     let [theme, setTheme] = useState("Light");
 
     return (
-        <div>
-            <display name={name} email={email} phone={phone} theme={theme} />
-            <form theme={theme} handleName={setName} handleEmail={setEmail} handlePhone={setNumber} handleTheme={setTheme} />
+        <div class="my-container">
+            <Display name={name} email={email} phone={phone} theme={theme} />
+            <Form theme={theme} handleName={setName} handleEmail={setEmail} handlePhone={setNumber} handleTheme={setTheme} />
         </div>
     );
 }
